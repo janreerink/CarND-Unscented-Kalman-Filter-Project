@@ -66,6 +66,25 @@ public:
 
   ///* Sigma point spreading parameter
   double lambda_;
+  
+  ///*NIS value for radar
+  double NIS_radar_;
+
+  ///*NIS value for lidar
+  double NIS_lidar_;
+  
+  ///* timestamp used for calculation of delta t
+  long long current_timestamp_;
+  
+  ///* augmented state vector; x plus 2 process noise dims
+  VectorXd x_aug_;
+  
+  ///* augmented covariance matrix
+  MatrixXd P_aug_;
+  
+  ///* sigma point matrix
+  MatrixXd Xsig_aug;
+
 
 
   /**
